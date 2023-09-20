@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import "@/app/css/home.css"
+import '@/app/css/home.css';
 
 interface Pokemon {
   name: string;
@@ -27,19 +27,22 @@ function Home() {
 
   return (
     <div className='container'>
-      <div >
-      <h1>Pokédex</h1>
+       <h1 className='title'>Pokédex</h1>
+      <div className='grid'>
         {pokemons.map(pokemon => (
-          <div  key={pokemon.name}>
-            
-              <p>Nombre: {pokemon.name} </p><p>Id: {pokemon.id} </p> <br />
-              <button></button>
-              
+          <div key={pokemon.name} className='card'>
+            <img
+              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}
+              alt={pokemon.name}
+            />
+            <p>Nombre: {pokemon.name}</p>
+            <p>ID: {pokemon.id}</p>
+            <p>Detail Pokemon:</p>
+            <a href={pokemon.url}>Detail</a>
           </div>
         ))}
       </div>
-    </div> 
-      
+    </div>
   );
 }
 
