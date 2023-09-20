@@ -4,8 +4,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Meigi',
-  description: 'Quiero desarrollar una pagina de ventas, que tenga su respectivo login, en el que la persona pueda hacer su carrito de compras y el metodo de pago sea contraentrega o pago por pse',
+  title: 'pokedex',
+  description: 'pagina con api de pokedex',
 }
 
 export default function RootLayout({
